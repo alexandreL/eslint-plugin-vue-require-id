@@ -1,0 +1,30 @@
+{
+  "name": "vue-eslint-require-id",
+  "version": "1.0.0",
+  "description": "Vue-eslint-require-id is a custom ESLint plugin that enforces the use of 'id' attribute on specified HTML elements in Vue.js templates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandreL/vue-eslint-require-id.git"
+  },
+  "keywords": [
+    "vue",
+    "eslint"
+  ],
+  "author": "Alexandre Loubeyres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexandreL/vue-eslint-require-id/issues"
+  },
+  "homepage": "https://github.com/alexandreL/vue-eslint-require-id#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "vue-eslint-parser": "^9.1.0"
+  }
+}
