@@ -1,0 +1,1 @@
+# vue-eslint-require-id
