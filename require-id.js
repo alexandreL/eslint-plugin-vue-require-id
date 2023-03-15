@@ -3,8 +3,6 @@
 const utils = require('eslint-plugin-vue/lib/utils')
 
 function hasIdAttribute(node) {
-    console.error('node.startTag.attributes')
-    console.error(node.startTag.attributes)
     return node.startTag.attributes.some(attribute => attribute.key.name === 'id')
 }
 
