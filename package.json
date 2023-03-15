@@ -1,6 +1,6 @@
 {
   "name": "@vue-require-id/eslint-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "@vue-require-id/eslint-plugin is a custom ESLint plugin that enforces the use of 'id' attribute on specified HTML elements in Vue.js templates.",
   "main": "index.js",
   "scripts": {

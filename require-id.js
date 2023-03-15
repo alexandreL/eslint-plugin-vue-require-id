@@ -19,9 +19,9 @@ function create(context) {
                 context.report({
                     node,
                     message: `Missing "id" attribute in <${ node.rawName }>`,
-                    fix(fixer) {
-                        return fixer.insertTextBefore(node.endTag, ` id="${ node.name }"`)
-                    }
+                    // fix(fixer) {
+                    //     return fixer.insertTextBefore(node.endTag, ` id="${ node.name }"`)
+                    // }
                 })
             }
         }
@@ -49,7 +49,7 @@ module.exports = {
                 },
             },
             additionalProperties: false,
-            fixable: 'code',
+            // fixable: 'code',
         } ],
     },
     create
