@@ -3,7 +3,7 @@
 const utils = require('eslint-plugin-vue/lib/utils')
 
 function hasIdAttribute(node) {
-    return node.startTag.attributes.some(attribute => attribute.key.name === 'id')
+    return node.startTag.attributes.some(attribute => attribute.key.name === 'id' || attribute.key.name === ':id')
 }
 
 function create(context) {

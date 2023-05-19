@@ -6,3 +6,5 @@ node_modules/
 
 test
 mocharc.js
+.changeset
+.gitignore
