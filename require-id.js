@@ -2,8 +2,15 @@
 
 const utils = require('eslint-plugin-vue/lib/utils')
 
+function vIdentifierIsId(attribute) {
+    const { name, argument } = attribute.key
+    if (typeof name === 'undefined') return false
+    return name.rawName === ':' && argument.rawName === 'id'
+
+}
+
 function hasIdAttribute(node) {
-    return node.startTag.attributes.some(attribute => attribute.key.name === 'id' || attribute.key.name === ':id')
+    return node.startTag.attributes.some(attribute => attribute.key.name === 'id' || vIdentifierIsId(attribute))
 }
 
 function create(context) {

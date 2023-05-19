@@ -1,6 +1,9 @@
 const { RuleTester } = require('eslint')
 const requireId = require('../require-id.js')
-const ruleTester = new RuleTester()
+const ruleTester = new RuleTester({
+    parser: require.resolve('vue-eslint-parser'),
+    parserOptions: { ecmaVersion: 2015 }
+})
 ruleTester.run('require-id', requireId, {
     valid: [
         {
@@ -17,18 +20,15 @@ ruleTester.run('require-id', requireId, {
         },
         {
             code: '<template><input :id="inputId" type="text" /></template>',
-        },
-        {
-            code: '<template><button :key="buttonKey">Click me!</button></template>',
-        },
+        }
     ],
     invalid: [
         {
             code: '<template><button>Click me!</button></template>',
             errors: [
                 {
-                    message: 'The button element must have an id attribute.',
-                    type: 'Identifier',
+                    message: 'Missing "id" attribute in <button>',
+                    type: 'VElement',
                 },
             ],
         },
@@ -36,8 +36,8 @@ ruleTester.run('require-id', requireId, {
             code: '<template><input type="text" /></template>',
             errors: [
                 {
-                    message: 'The input element must have an id attribute.',
-                    type: 'Identifier',
+                    message: 'Missing "id" attribute in <input>',
+                    type: 'VElement',
                 },
             ],
         },
@@ -45,8 +45,8 @@ ruleTester.run('require-id', requireId, {
             code: '<template><button :key="buttonKey">Click me!</button></template>',
             errors: [
                 {
-                    message: 'The button element must have an id attribute.',
-                    type: 'Identifier',
+                    message: 'Missing "id" attribute in <button>',
+                    type: 'VElement',
                 },
             ],
         },

@@ -28,5 +28,16 @@ For example:
 
 If the id attribute is missing from any input or button element in your templates, ESLint will report an error.
 
+## test
+
+install test packages:
+
+"mocha": "^10.2.0",
+"eslint-plugin-vue": "^9.13.0"
+
+run test:
+
+npm run test
+
 License
 This project is licensed under the MIT License.
